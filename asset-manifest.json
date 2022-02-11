@@ -1,13 +1,15 @@
 {
   "files": {
     "main.css": "/Walmart-SWE-Frontend/static/css/main.70c9488f.css",
-    "main.js": "/Walmart-SWE-Frontend/static/js/main.8193297b.js",
+    "main.js": "/Walmart-SWE-Frontend/static/js/main.d2f5a4ea.js",
+    "static/media/defaultAvatar.jpeg": "/Walmart-SWE-Frontend/static/media/defaultAvatar.55dd82f9758c6d74f011.jpeg",
+    "static/media/walmart.svg": "/Walmart-SWE-Frontend/static/media/walmart.fb6e9bde8272654ee874ec9058c0e945.svg",
     "index.html": "/Walmart-SWE-Frontend/index.html",
     "main.70c9488f.css.map": "/Walmart-SWE-Frontend/static/css/main.70c9488f.css.map",
-    "main.8193297b.js.map": "/Walmart-SWE-Frontend/static/js/main.8193297b.js.map"
+    "main.d2f5a4ea.js.map": "/Walmart-SWE-Frontend/static/js/main.d2f5a4ea.js.map"
   },
   "entrypoints": [
     "static/css/main.70c9488f.css",
-    "static/js/main.8193297b.js"
+    "static/js/main.d2f5a4ea.js"
   ]
 }
