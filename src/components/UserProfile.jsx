@@ -3,6 +3,8 @@
 
 import React from "react";
 
+import defaultPicture from "../Pictures/defaultAvatar.jpeg";
+
 const UserProfile = ({ user }) => {
   return (
     <div className='my-3 p-2 bg-white rounded shadow-sm'>
@@ -10,7 +12,7 @@ const UserProfile = ({ user }) => {
         <div className='col-md-3'>
           <img
             className='rounded img-thumbnail img-fluid'
-            src='defaultAvatar.jpeg'
+            src={defaultPicture}
             alt='Avatar'
           />
         </div>
@@ -27,8 +29,6 @@ const UserProfile = ({ user }) => {
           </div>
         </div>
       </div>
-      <hr />
-      Here display posts
     </div>
   );
 };

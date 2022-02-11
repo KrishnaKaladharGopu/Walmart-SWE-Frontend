@@ -7,11 +7,13 @@
 //    i. expand to show album list, on click each album to show photos
 // Use these free REST APIs - https://jsonplaceholder.typicode.com/ to design the page.
 
-import React from "react";
+import React, { Fragment } from "react";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
 import UserProfile from "../UserProfile";
+import UserPosts from "../UserPosts";
+import UserAlbums from "../UserAlbums";
 
 const User = (props) => {
   const [userData, setUserData] = useState(props.history.location.user);
@@ -31,13 +33,18 @@ const User = (props) => {
     if (userData === undefined) {
       getUserData();
     }
-  }, [userData, getUserData]);
+  }, []);
 
   return (
     <div className='container'>
-      This is user
-      {JSON.stringify(userData)} page
-      {userData && <UserProfile user={userData} />}
+      {/* {JSON.stringify(userData)} */}
+      {userData && (
+        <Fragment>
+          <UserProfile user={userData} />
+          <UserPosts user={userData} />
+          <UserAlbums user={userData} />
+        </Fragment>
+      )}
     </div>
   );
 };

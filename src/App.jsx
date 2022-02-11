@@ -12,6 +12,7 @@ import "./App.css";
 // Pages
 import Home from "./components/Pages/Home";
 import User from "./components/Pages/User";
+import Album from "./components/Pages/Album";
 
 // Components
 import Navbar from "./components/Navbar/Navbar";
@@ -20,10 +21,9 @@ const App = () => {
   return (
     <Router>
       <Navbar />
-      {/* 1. User list by name */}
       <Route exact path='/' component={Home} />
-      {/* 2. User detail page */}
-      <Route path='/:id' component={User} />
+      <Route exact path='/User/:id' component={User} />
+      <Route exact path='/Album/:id' component={Album} />
     </Router>
   );
 };

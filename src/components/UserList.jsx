@@ -22,7 +22,7 @@ const UserList = ({ user }) => {
   const history = useHistory();
   const handleRedirect = () => {
     history.push({
-      pathname: "/" + user.id,
+      pathname: "/User/" + user.id,
       user,
     });
   };
