@@ -11,6 +11,8 @@ import UserPost from "./UserPost";
 const UserPosts = ({ user }) => {
   const [posts, setPosts] = useState([]);
 
+  const [input, setInput] = useState("");
+
   const getPosts = async () => {
     const response = await fetch(
       "https://jsonplaceholder.typicode.com/posts?userId=" + user.id
@@ -24,10 +26,33 @@ const UserPosts = ({ user }) => {
     getPosts();
   }, []);
 
+  const handleSearch = (event) => {
+    event.preventDefault();
+
+    console.log(input);
+  };
+
   return (
     <div className='my-3 p-3 bg-white rounded shadow-sm'>
       <Collapsible trigger={<h3>User Posts</h3>}>
         <hr />
+        <div className='d-flex flex-row justify-content-end p-1'>
+          <form className='form-inline my-2 my-lg-0' onSubmit={handleSearch}>
+            <input
+              className='form-control mr-sm-3'
+              type='search'
+              placeholder='Search'
+              aria-label='Search'
+              onChange={(e) => {
+                setInput(e.target.value);
+              }}
+            />
+            <button className='btn btn-outline-dark my-2 my-sm-0' type='submit'>
+              Search
+            </button>
+          </form>
+        </div>
+
         {posts.map((post) => {
           return <UserPost key={post.id} post={post} />;
         })}
