@@ -5,8 +5,8 @@
 // Use these free REST APIs - https://jsonplaceholder.typicode.com/ to design the page.
 
 import React from "react";
-// import { HashRouter as Router, Route } from "react-router-dom";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { HashRouter as Router, Route } from "react-router-dom";
+// import { BrowserRouter as Router, Route } from "react-router-dom";
 import "./App.css";
 
 // Pages
