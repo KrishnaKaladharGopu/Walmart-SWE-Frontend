@@ -11,9 +11,9 @@ import React, { Fragment } from "react";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
-import UserProfile from "../UserProfile";
-import UserPosts from "../UserPosts";
-import UserAlbums from "../UserAlbums";
+import UserProfile from "../User/UserProfile";
+import UserPosts from "../User/UserPosts";
+import UserAlbums from "../User/UserAlbums";
 
 const User = (props) => {
   const [userData, setUserData] = useState(props.history.location.user);

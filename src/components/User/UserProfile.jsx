@@ -3,7 +3,7 @@
 
 import React from "react";
 
-import defaultPicture from "../Pictures/defaultAvatar.jpeg";
+import defaultPicture from "../../Pictures/defaultAvatar.jpeg";
 
 const UserProfile = ({ user }) => {
   return (
