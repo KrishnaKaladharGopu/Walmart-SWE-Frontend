@@ -23,7 +23,7 @@ const App = () => {
       {/* 1. User list by name */}
       <Route exact path='/' component={Home} />
       {/* 2. User detail page */}
-      <Route exact path='/User/:id' component={User} />
+      <Route path='/:id' component={User} />
     </Router>
   );
 };

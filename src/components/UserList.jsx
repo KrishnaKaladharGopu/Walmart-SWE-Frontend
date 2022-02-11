@@ -1,13 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
 import { useHistory } from "react-router-dom";
+
+import Tooltip from "@mui/material/Tooltip";
 
 const HoverText = ({ user }) => {
   return (
     <div className='mx-5'>
-      <h5>
+      <h6>
         <strong>User name: </strong>
         {user.username}
-      </h5>
+      </h6>
       <div>
         <strong> Email: </strong>
         {user.email}
@@ -17,34 +19,23 @@ const HoverText = ({ user }) => {
 };
 
 const UserList = ({ user }) => {
-  const [isHovering, setIsHovering] = useState(false);
-  const handleMouseOver = () => {
-    setIsHovering(true);
-  };
-
-  const handleMouseOut = () => {
-    setIsHovering(false);
-  };
-
   const history = useHistory();
   const handleRedirect = () => {
-    // history.push("/User/" + user.id);
     history.push({
-      pathname: "/User/" + user.id,
+      pathname: "/" + user.id,
       user,
     });
   };
 
   return (
-    <div
-      onClick={handleRedirect}
-      onMouseOver={handleMouseOver}
-      onMouseOut={handleMouseOut}
-      className='my-3 p-2 bg-white rounded shadow-sm'>
-      <div>
-        <h3>{user.name}</h3>
-        {isHovering && <HoverText user={user} />}
-      </div>
+    <div key={user.id}>
+      <Tooltip title={<HoverText user={user} />}>
+        <div
+          onClick={handleRedirect}
+          className='my-3 p-2 bg-white rounded shadow-sm'>
+          {user.name}
+        </div>
+      </Tooltip>
     </div>
   );
 };
